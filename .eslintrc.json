@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",  // 允许使用 'any' 类型
+    "@typescript-eslint/no-unused-vars": [
+      "warn",  // 将未使用的变量视为警告而不是错误
+      {
+        "vars": "all",
+        "args": "none",  // 不检查函数参数
+        "ignoreRestSiblings": true,  // 忽略对象的解构赋值中的剩余属性
+        "varsIgnorePattern": "^_"  // 忽略以 _ 开头的变量名
+      }
+    ]
+  }
+}
